@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Make a 3 columns grid container, the size of the columns is determined by the size of the container and on the size of the content of the items in the column */
+    grid-auto-rows: minmax(200px, auto); /* https://bitsofco.de/how-the-minmax-function-works/ */
+    overflow: hidden;
+}
+
+.grid-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    outline: 2px solid black;
+}
+
+.grid-container div:last-child {
+    grid-area: 3/3;
+  }
